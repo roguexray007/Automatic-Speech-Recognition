@@ -1,6 +1,7 @@
 # encoding: utf-8
 # ******************************************************
-# # Author       : GH GOD
+
+# Author       : GH GOD
 # Email        : hardxray007@gmail.com
 # Filename     : deepSpeech2.py
 # Description  : Deep Speech2 model for Automatic Speech Recognition

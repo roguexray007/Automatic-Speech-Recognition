@@ -1,6 +1,6 @@
 # encoding: utf-8
 # ******************************************************
-# # Author       : GH GOD
+# Author       : GH GOD
 # Email        : hardxray007@gmail.com
 # Filename     : CapsuleNetwork.py
 # Description  : Capsule network for Automatic Speech Recognition

@@ -1,6 +1,6 @@
 # encoding: utf-8
 # ******************************************************
-# # Author       : GH GOD
+#  Author       : GH GOD
 # Email        : hardxray007@gmail.com
 # Filename     : dynamic_brnn.py
 # Description  : Dynamic Bidirectional RNN model for Automatic Speech Recognition
