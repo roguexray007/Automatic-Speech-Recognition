@@ -49,8 +49,9 @@ def wav2feature(rootdir, save_directory, mode, feature_len, level, keywords, win
 	count = 0
 	for subdir, dirs, files in os.walk(rootdir):
 		for file in files:
-			if count == 2:
-				break
+			# for testing
+			# if count == 2:
+			# 	break
 			fullFilename = os.path.join(subdir, file)
 			filenameNoSuffix = os.path.splitext(fullFilename)[0]
 			if file.endswith('.WAV'):
@@ -102,20 +103,28 @@ def wav2feature(rootdir, save_directory, mode, feature_len, level, keywords, win
 
 				count += 1
 				print('file index:', count)
+				# if save:
+				# 	fileDir = os.path.join(feat_dir, filenameNoSuffix.split('/')[-2])
+				# 	if not os.path.exists(fileDir):
+				# 		os.makedirs(fileDir)
+				# 	featureFilename = os.path.join(feat_dir, filenameNoSuffix.split('/')[-2],
+				# 								   filenameNoSuffix.split('/')[-1] + '.npy')
+				# 	print("featurezfileName : ", featureFilename)
+				# 	np.save(featureFilename, feat)
+				# 	tempDir = os.path.join(label_dir, filenameNoSuffix.split('/')[-2])
+				# 	if not os.path.exists(tempDir):
+				# 		os.makedirs(tempDir)
+				# 	labelFilename = os.path.join(label_dir, filenameNoSuffix.split('/')[-2],
+				# 								 filenameNoSuffix.split('/')[-1] + '.npy')
+				# 	print("labelFilename", labelFilename)
+				# 	np.save(labelFilename, phenome)
 				if save:
-					fileDir = os.path.join(feat_dir, filenameNoSuffix.split('/')[-2])
-					if not os.path.exists(fileDir):
-						os.makedirs(fileDir)
-					featureFilename = os.path.join(feat_dir, filenameNoSuffix.split('/')[-2],
-												   filenameNoSuffix.split('/')[-1] + '.npy')
-					print("featurezfileName : ", featureFilename)
+					featureFilename = feat_dir + filenameNoSuffix.split('/')[-2] + '-' + filenameNoSuffix.split('/')[
+						-1] + '.npy'
 					np.save(featureFilename, feat)
-					tempDir = os.path.join(label_dir, filenameNoSuffix.split('/')[-2])
-					if not os.path.exists(tempDir):
-						os.makedirs(tempDir)
-					labelFilename = os.path.join(label_dir, filenameNoSuffix.split('/')[-2],
-												 filenameNoSuffix.split('/')[-1] + '.npy')
-					print("labelFilename", labelFilename)
+					labelFilename = label_dir + filenameNoSuffix.split('/')[-2] + '-' + filenameNoSuffix.split('/')[
+						-1] + '.npy'
+					print(labelFilename)
 					np.save(labelFilename, phenome)
 
 
