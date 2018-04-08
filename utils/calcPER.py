@@ -1,8 +1,7 @@
 # encoding: utf-8
 # ******************************************************
-# Author       : zzw922cn
-# Last modified: 2017-12-09 11:00
-# Email        : zzw922cn@gmail.com
+# # Author       : GH GOD
+# Email        : hardxray007@gmail.com
 # Filename     : calcPER.py
 # Description  : Calculating Phoneme Error Rate(PER) based on python leven
 # ******************************************************
